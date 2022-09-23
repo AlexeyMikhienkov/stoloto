@@ -1,0 +1,53 @@
+@function vw-desktop($v) {
+  @return adaptive($v, $DESIGN-W, 1vw);
+}
+
+@function vw-mobile($v) {
+  @return adaptive($v, $DESIGN-W-M, 1vw);
+}
+
+@function vh-desktop($v) {
+  @return adaptive($v, $DESIGN-H, 1vh);
+}
+
+@function vh-mobile($v) {
+  @return adaptive($v, $DESIGN-H-M, 1vh);
+}
+
+@function adaptive($value, $size, $units) {
+  @if type-of($size) != 'list' {
+    $size: ($size,);
+  }
+  @if type-of($units) != 'list' {
+    $units: ($units,);
+  }
+
+  @if type-of($value) == 'list' {
+    @for $i from 1 through length($value) {
+      $value: set-nth($value, $i, adaptive(nth($value, $i), nth($size, ($i - 1) % length($size) + 1), nth($units, ($i - 1) % length($units) + 1)));
+    }
+
+    @return $value;
+
+  } @else if type-of($value) == "string" {
+    @return $value;
+  }
+
+  $val: fixed(strip-unit($value) / strip-unit(nth($size,1)) * 100, 1000);
+  @if $val == 0 {
+    @return $val;
+  }
+  @return $val * nth($size, 1);
+}
+
+@function fixed($val, $signs: 100) {
+  @return round($signs * $val) / $signs;
+}
+
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}
