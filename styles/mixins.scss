@@ -1,0 +1,68 @@
+@mixin MOBILE() {
+  @media screen and (max-width: $TABLET - 1) {
+    @content;
+  }
+}
+
+@mixin NOT-MOBILE {
+  @media screen and (min-width: $TABLET) {
+    @content;
+  }
+}
+
+@mixin TABLET() {
+  @media screen and (min-width: $TABLET) and (max-width: $TABLET-L - 1) and (orientation: portrait) {
+    @content;
+  }
+}
+
+@mixin NOT-TABLET() {
+  @media screen and (min-width: $TABLET-L) and (max-width: $TABLET - 1) {
+    @content;
+  }
+}
+
+@mixin TABLET-L() {
+  @media screen and (min-width: $TABLET-L) and (max-width: $DESKTOP - 1) and (orientation: portrait) {
+    @content;
+  }
+}
+
+@mixin NOT-TABLET-L() {
+  @media screen and (min-width: $DESKTOP) and (max-width: $TABLET-L - 1) {
+    @content;
+  }
+}
+
+@mixin DESKTOP {
+  @media screen and (min-width: $DESKTOP) {
+    @content;
+  }
+}
+
+@mixin NOT-DESKTOP {
+  @media screen and (max-width: $DESKTOP - 1) {
+    @content;
+  }
+}
+
+@mixin option-width($p, $v, $vm: $v, $vt: $vm) {
+  @include DESKTOP {
+    #{$p}: vw-desktop($v);
+  }
+
+  @include MOBILE {
+    #{$p}: vw-mobile($vm)
+  }
+}
+
+@mixin option-height($p, $v, $vm: $v, $vt: $vm) {
+  @include DESKTOP {
+    #{$p}: vh-desktop($v);
+  }
+
+  @include MOBILE {
+    #{$p}: vh-mobile($vm)
+  }
+
+}
