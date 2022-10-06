@@ -1,0 +1,154 @@
+.about-lottery {
+
+  &__title {
+    margin: 152px 0 0 198px;
+
+    width: fit-content;
+
+    white-space: pre-wrap;
+
+    font-family: $MONTSERRAT;
+    font-weight: 700;
+    font-size: 73px;
+    font-style: normal;
+    line-height: 69.35px;
+
+    color: $TITLE-COLOR;
+  }
+
+  &__video-block {
+    display: flex;
+    flex-direction: row;
+
+    position: relative;
+    width: fit-content;
+
+    left: 1529px;
+    bottom: 115px;
+  }
+
+  &__video-text {
+    margin: 0;
+
+    white-space: pre-wrap;
+
+    font-family: $MONTSERRAT; //TODO: не тот weight
+    font-weight: 600;
+    font-size: 20px;
+    font-style: normal;
+    line-height: 28px;
+
+    color: $WHITE;
+  }
+
+  &__video-button {
+    background: url("/images/video-arrow.png");
+
+    position: relative;
+    top: 4px;
+
+    width: 52px;
+    height: 52px;
+
+    margin-left: 20px;
+
+    border: none;
+  }
+
+  &__advantages-block {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    width: 1518px;
+
+    margin-left: 201px;
+    margin-top: 44px;
+  }
+
+  &__advantages-item {
+    width: 744px;
+    height: 310px;
+
+    background-color: rgba(255, 255, 255, 0.6);
+    filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.14));
+
+    border-radius: 44px;
+
+    &_1, &_3 {
+      margin-right: 30px;
+    }
+
+    &_1, &_2, {
+      margin-bottom: 30px;
+    }
+
+    &_active {
+      background: linear-gradient(#4C2B94, #A34881);
+    }
+  }
+
+  &__advantages-item-title {
+    margin: 30px 0 0 30px;
+
+    white-space: pre-wrap;
+
+    width: fit-content;
+
+    font-family: $MONTSERRAT;
+    font-weight: 700;
+    font-size: 40px;
+    font-style: normal;
+    line-height: 46.4px;
+
+    color: $TITLE-COLOR;
+
+    .about-lottery__advantages-item_active & {
+      color: $WHITE;
+    }
+  }
+
+  &__advantages-item-text {
+    width: 681px;
+
+    white-space: pre-wrap;
+
+    margin: 16px 0 0 30px;
+
+    font-family: $MONTSERRAT;
+    font-weight: 400;
+    font-size: 24px;
+    font-style: normal;
+    line-height: 31.2px;
+
+    color: $TITLE-COLOR;
+
+    .about-lottery__advantages-item_active & {
+      color: $WHITE;
+    }
+  }
+
+  &__advantages-item-image {
+    position: relative;
+    left: 551px;
+
+    width: 177px;
+    height: 177px;
+
+    .about-lottery__advantages-item_1 & {
+      bottom: 305px;
+    }
+
+    .about-lottery__advantages-item_2 & {
+      bottom: 335px;
+    }
+
+    .about-lottery__advantages-item_3 & {
+      bottom: 242px;
+    }
+
+    .about-lottery__advantages-item_4 & {
+      bottom: 302px;
+    }
+  }
+}

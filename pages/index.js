@@ -1,7 +1,7 @@
-import Test from "../components/test/Test";
+import Wrapper from "../components/wrapper/Wrapper";
 
 export default function Home() {
   return (
-    <Test/>
+    <Wrapper/>
   )
 }

@@ -1,0 +1,100 @@
+.intro {
+
+/*  &__content {
+    display: flex;
+    flex-direction: column;
+  }*/
+
+  &__loto-logo {
+    width: 92px;
+    height: 99px;
+
+    position: relative;
+    top: 64px;
+    left: 200px;
+  }
+
+  &__title {
+    margin-left: 195px;
+    margin-top: 240px;
+
+    white-space: pre-wrap;
+
+    font-family: $MONTSERRAT;
+    font-weight: 700;
+    font-size: 85px;
+    color: $TITLE-COLOR;
+    line-height: 80.75px;
+  }
+
+  &__prize-info {
+    width: fit-content;
+
+    color: $VIOLET;
+
+    border: solid $VIOLET 3px;
+    border-radius: 111.425px;
+  }
+
+  &__prize-text {
+    display: block;
+    margin: 0;
+
+    width: 187px;
+
+    font-family: $MONTSERRAT;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 41.23px;
+    letter-spacing: 1.1px;
+  }
+
+  &__prize-value {
+    display: block;
+    margin: 0;
+    width: fit-content;
+
+    padding: 20.9px 58.8px 30.11px 11.45px;
+
+    font-family: $MONTSERRAT;
+    font-weight: 700;
+    font-size: 74px;
+    line-height: 85.47px;
+  }
+
+  &__lotteries {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+
+    margin: 76px 0 24px 200px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+
+    margin-left: 201px;
+  }
+
+  &__channel-logo {
+    width: 67px;
+    height: 67px;
+
+    margin-right: 28px;
+  }
+
+  &__broadcast-info { //TODO: center inside div vertically
+    display: inline-block;
+    width: 275px;
+
+    font-family: $MONTSERRAT;
+    font-weight: 500;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 22px;
+
+    color: #212121;
+  }
+}

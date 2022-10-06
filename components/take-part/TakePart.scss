@@ -1,0 +1,187 @@
+.take-part {
+
+  .swiper-wrapper {
+    margin-left: 198px;
+  }
+
+  &__title {
+    margin-top: 122px;
+    margin-left: 198px;
+
+    width: fit-content;
+
+    font-family: $MONTSERRAT;
+    font-weight: 700;
+    font-size: 73px;
+    font-style: normal;
+    line-height: 64.9px;
+
+    color: $TITLE-COLOR;
+  }
+
+  &__action-order {
+    width: 518px;
+    height: 607px;
+
+    box-sizing: border-box;
+
+    background: rgba(255, 255, 255, 0.6);
+    border: 2px solid #FFFFFF;
+    border-radius: 44px;
+
+    //TODO: add gradient
+    &_active {
+      width: 1135px;
+      background: linear-gradient(#4C2B94, #A34881);
+      border: none;
+    }
+  }
+
+  &__action-order-line {
+    width: 458px;
+    height: 2px;
+
+    margin: 0 auto;
+
+    background-color: $WHITE;
+
+    .take-part__action-order_active & {
+      width: 1062px;
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+  }
+
+  &__action-order-step-wrapper {
+    width: 84px;
+    height: 84px;
+
+    margin: 34px 0 21px 35px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    background-color: $WHITE;
+
+    .take-part__action-order_active & {
+      background-color: $BUTTON-COLOR;
+    }
+  }
+
+  &__action-order-step {
+    display: inline-block;
+    width: fit-content;
+
+    margin: 0;
+
+    font-family: $MONTSERRAT;
+    font-weight: 700;
+    font-size: 40px;
+    font-style: normal;
+    line-height: 46.4px;
+
+    text-align: center;
+
+    color: $BUTTON-COLOR;
+
+    .take-part__action-order_active & {
+      color: $WHITE;
+    }
+  }
+
+  &__action-order-title {
+    width: 360px;
+    height: 92px;
+
+    margin: 19px 0 0 38px;
+
+    white-space: pre-wrap;
+
+    font-family: $MONTSERRAT;
+    font-weight: 700;
+    font-size: 40px;
+    font-style: normal;
+    line-height: 46.4px;
+
+    color: $TITLE-COLOR;
+
+    .take-part__action-order_active & {
+      color: $WHITE;
+    }
+  }
+
+  &__action-order-text {
+    width: 455px;
+    margin: 16.27px 25px 49px 38px;
+
+    white-space: pre-wrap;
+
+    font-family: $MONTSERRAT;
+    font-weight: 400;
+    font-size: 24px;
+    font-style: normal;
+    line-height: 31.2px;
+
+    color: $TITLE-COLOR;
+
+    .take-part__action-order_active & {
+      width: 596px;
+
+      color: $WHITE;
+    }
+  }
+
+  &__action-order-icon {
+    position: relative;
+    left: 830px;
+    bottom: 230px; //TODO: задать по-другому, число подобрано
+  }
+
+  &__nav-block {
+    display: flex;
+    flex-direction: row;
+
+    width: fit-content;
+    margin: 40px auto 0;
+  }
+
+  &__nav {
+    background-image: url('/images/carousel-arrow.png');
+    width: 45px;
+    height: 45px;
+
+    padding: 0;
+    border: none;
+
+    //  opacity: 0.6;
+    border-radius: 10px;
+
+    &_prev {
+      transform: rotate(180deg);
+    }
+
+    &_disabled {
+      opacity: 0.7;
+    }
+  }
+
+  &__nav-text {
+    margin: 0 18px;
+
+    font-family: $MONTSERRAT;
+    font-weight: 700;
+    font-size: 20px;
+    font-style: normal;
+    line-height: 45px;
+
+    text-align: center;
+
+    color: $TITLE-COLOR;
+  }
+
+  &__button {
+    margin-top: 40px;
+  }
+}

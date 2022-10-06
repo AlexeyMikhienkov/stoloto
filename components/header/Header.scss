@@ -1,0 +1,27 @@
+.header {
+  position: absolute;
+  width: fit-content;
+
+  &__nav {
+    display: flex;
+    flex-direction: row;
+
+    margin-left: 767px;
+    margin-top: 50.5px;
+  }
+
+  &__item {
+    display: block;
+    height: 31px;
+
+    margin-right: 50px;
+
+    color: $WHITE;
+
+    font-family: $MONTSERRAT;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 30px;
+  }
+}

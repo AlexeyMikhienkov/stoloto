@@ -1,0 +1,143 @@
+.winners {
+
+  &__title {
+    margin-top: 111px;
+    margin-left: 193px;
+
+    font-family: $MONTSERRAT;
+    font-weight: 700;
+    font-size: 73px;
+    font-style: normal;
+    line-height: 69.35px;
+
+    color: $TITLE-COLOR;
+  }
+
+  & .swiper-wrapper {
+    width: 1578px;
+    margin: 0 auto;
+  }
+
+  & .swiper-slide {
+    margin-right: 82px;
+  }
+
+  &__nav-block {
+    display: flex;
+    flex-direction: row;
+
+    width: fit-content;
+    margin: 133px auto 0;
+  }
+
+  &__nav {
+    background-image: url('/images/carousel-arrow.png');
+    width: 45px;
+    height: 45px;
+
+    padding: 0;
+    border: none;
+
+    //  opacity: 0.6;
+    border-radius: 10px;
+
+    &_prev {
+      transform: rotate(180deg);
+    }
+
+    &_disabled {
+      opacity: 0.7;
+    }
+  }
+
+  &__nav-text {
+    margin: 0 18px;
+
+    font-family: $MONTSERRAT;
+    font-weight: 700;
+    font-size: 20px;
+    font-style: normal;
+    line-height: 45px;
+
+    text-align: center;
+
+    color: $TITLE-COLOR;
+  }
+
+  &__winner {
+    width: 495px;
+    height: 549px;
+
+    font-family: $MONTSERRAT;
+    font-style: normal;
+
+    color: $TITLE-COLOR;
+  }
+
+  &__winner-image {
+    width: 424px;
+    height: 424px;
+  }
+
+  &__winner-name {
+    margin: 35px 0 0;
+
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  &__winner-prize {
+    margin: 0;
+    font-weight: 700;
+    font-size: 54px;
+    line-height: 62.64px;
+  }
+
+  &__more-stories {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    position: relative;
+    left: 1363px;
+    bottom: 28px;
+
+    width: fit-content;
+  }
+
+  &__more-stories-text {
+    margin: 0;
+
+    white-space: pre-wrap;
+
+    font-family: $MONTSERRAT;
+    font-weight: 500;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 22px;
+
+    color: $TITLE-COLOR;
+  }
+
+  &__more-stories-logos {
+    display: flex;
+    flex-direction: row;
+
+    margin-top: 24.5px;
+
+    img:last-of-type {
+      margin-right: 0;
+    }
+  }
+
+  &__more-stories-logo {
+    width: 65.5px;
+    height: 65.5px;
+
+    margin-right: 31.5px;
+  }
+
+
+
+  }
