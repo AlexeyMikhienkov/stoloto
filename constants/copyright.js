@@ -231,7 +231,7 @@ export const aboutLottery = {
 }
 
 export const downloadApp = {
-  title: "Скачайте мобильное\n приложение «Столото»",
+  title: "Скачайте мобильное\nприложение «Столото»",
   advantages: [
     {
       text: "Удобная и&nbsp;безопасная оплата",
@@ -255,31 +255,31 @@ export const downloadApp = {
     icons: [
       {
         type: "apple",
-        icon: "/images/logo/apple.png"
+        iconSrc: "/images/logo/apple.png"
       },
       {
         type: "googlePlay",
-        icon: "/images/logo/google-play.png"
+        iconSrc: "/images/logo/google-play.png"
       },
       {
         type: "xiaomi",
-        icon: "/images/logo/xiaomi.png"
+        iconSrc: "/images/logo/xiaomi.png"
       },
       {
         type: "huawei",
-        icon: "/images/logo/huawei.png"
+        iconSrc: "/images/logo/huawei.png"
       }
     ]
   },
-  screens: {
-    types: ["left", "right"],
-    imageSrcPrefix: "/images/mobile-screen_"
-  },
+  phones: [
+    {src: "/images/mobile-screen_left.png", type: "left"},
+    {src: "/images/mobile-screen_right.png", type: "right"},
+  ],
   increaseChance: "Повысить шансы"
 }
 
 export const barrels = {
-  title: "Уютные осенние\n призы ждут вас!",
+  title: "Уютные осенние\nпризы ждут вас!",
   buy: "Купить"
 }
 

@@ -1,0 +1,92 @@
+.download-app {
+
+  &__title {
+    margin: 193px 0 50px 204px;
+
+    white-space: pre-wrap;
+
+    font-family: $MONTSERRAT;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 74px;
+    line-height: 70.3px;
+
+    color: $TITLE-COLOR;
+  }
+
+  &__advantages {
+    display: flex;
+    flex-direction: column;
+
+    margin-left: 204px;
+    margin-top: 50px;
+
+    div:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  &__advantage-block {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    margin-bottom: 40px;
+  }
+
+  &__advantage-icon {
+    width: 45px; //TODO: не тот размер у изображений
+    object-fit: contain;
+  }
+
+  &__advantage-text {
+    margin: 0 0 0 38px;
+    font-family: $MONTSERRAT;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 46.8px;
+
+    letter-spacing: -2px;
+
+    color: $TITLE-COLOR;
+  }
+
+  &__content-button {
+    margin-top: 42.82px;
+    margin-left: 200px;
+  }
+
+  &__button {
+    margin: 254px auto 0;
+  }
+
+  &__text {
+    margin-left: 38px;
+  }
+
+  &__icons {
+    display: flex;
+    flex-direction: row;
+
+    width: fit-content;
+  }
+
+  &__icon {
+    margin-left: 13.9px;
+  }
+
+  &__mobile {
+    &_left {
+      position: absolute;
+      transform: translate(1117px, -476px);
+      z-index: 1;
+    }
+
+    &_right {
+      position: absolute;
+      transform: translate(1338px, -493px);
+    }
+  }
+
+}

@@ -1,38 +1,50 @@
-export default function DownloadApp({title, advantages, download, screens, increaseChance}) {
+import {safeHTML} from "../../utils/safeHTML";
+import Button from "../button/Button";
+
+export default function DownloadApp({title, advantages, download, phones, increaseChance}) {
 
   function items(advantages) {
-    return advantages.map(({text, iconSrc}) => (
-      <div className={"download-app__advantage-block"}>
-        <img src={iconSrc} className={"download-app__advantage-icon"}/>
-        <p className={"download-app__advantage-text"}>{text}</p>
-      </div>
-    ))
+    return advantages.map(({text, iconSrc}, index) => {
+      console.log(iconSrc)
+      return (
+        <div key={index} className={"download-app__advantage-block"}>
+          <img src={iconSrc} className={`download-app__advantage-icon download-app__advantage-icon_${index + 1}`}/>
+          <p className={"download-app__advantage-text"}>{safeHTML(text)}</p>
+        </div>
+      )
+    })
   }
 
   function downloadItems(icons) {
-    return Object.entries(icons).map(([key, iconSrc]) => (
-      <div className={"download-app__block-icon-wrapper"}>
-        <img src={iconSrc} alt={`${download.text}: ${key}`} className={"download-app__block-icon"}/>
-      </div>
-    ))
+    console.log(icons)
+    return icons.map(({type, iconSrc}) => {
+      return (
+          <img src={iconSrc} key={type} alt={`${download.text}: ${type}`}
+               className={"download-app__icon"}/>
+      )
+    })
   }
 
-  function screensItems({types, imageSrcPrefix}) {
-    return types.map(type => (
-      <img src={imageSrcPrefix + type} className={`download-app__mobile download-app__mobile_${type}`}/>
+  function phonesItems(items) {
+    return items.map(({src, type}) => (
+      <img src={src} key={src} className={`download-app__mobile download-app__mobile_${type}`}/>
     ))
   }
 
   return (
     <section className={"download-app app__download-app"}>
-      <p className={"download-app__title"}>{title}</p>
-      {items(advantages)}
-      <div className={"download-app__block"}>
-        <p className={"download-app__block-text"}>{download.text}</p>
-        {downloadItems(download.icons)}
+      <p className={"download-app__title"}>{safeHTML(title)}</p>
+      <div className={"download-app__advantages"}>
+        {items(advantages)}
       </div>
-      {screensItems(screens)}
-      <button className={"download-app__button"}>{increaseChance}</button>
+      <Button className={"button_content download-app__content-button"}>
+        <p className={"download-app__text"}>{download.text}</p>
+        <div className={"download-app__icons"}>
+          {downloadItems(download.icons)}
+        </div>
+      </Button>
+      {phonesItems(phones)}
+      <Button className={"download-app__button"}>{increaseChance}</Button>
     </section>
   )
 }
