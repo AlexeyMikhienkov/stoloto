@@ -1,8 +1,221 @@
 .winners {
+  position: relative;
+
+  &__circle {
+    position: absolute;
+
+    border-radius: 50%;
+
+    &_1 {
+      width: 483px;
+      height: 483px;
+      left: 127px;
+      top: 27px;
+
+      background: #F69562;
+
+      @include MOBILE {
+        width: 422px;
+        height: 422px;
+        left: -69px;
+        top: 46px;
+
+        background: #F27C63;
+        backdrop-filter: blur(10px);
+      }
+    }
+
+    &_2 {
+      width: 239px;
+      height: 239px;
+      left: 489px;
+      top: 80px;
+
+      background: #F8A365;
+
+      @include MOBILE {
+        width: 260px;
+        height: 260px;
+        left: -73px;
+        top: 108px;
+      }
+    }
+
+    &_4 {
+      width: 330px;
+      height: 330px;
+      left: 1132px;
+      top: 40px;
+
+      background: #F9B162;
+      box-shadow: 8px 21px 26px rgba(186, 10, 10, 0.1);
+
+      @include MOBILE {
+        width: 123px;
+        height: 123px;
+        left: 181px;
+        top: 97px;
+
+        background: #F8A365;
+      }
+    }
+
+    &_5 {
+      width: 825px;
+      height: 825px;
+      left: 506px;
+      top: 76px;
+
+      background: #F27C63;
+
+      @include MOBILE {
+        display: none;
+      }
+    }
+
+    &_3 {
+      width: 556px;
+      height: 556px;
+      left: 1283px;
+      top: 117px;
+
+      background: #F8A365;
+
+      @include MOBILE {
+        display: none;
+      }
+    }
+  }
+
+  &__wave-img {
+    position: absolute;
+    left: 0;
+    top: 620px;
+
+    @include MOBILE {
+      display: none;
+    }
+  }
+
+  &__leaf {
+    position: absolute;
+
+    width: 169.81px;
+
+    left: 71px;
+    top: 1058px;
+
+    transform: rotate(-2deg);
+
+    @include MOBILE {
+      display: none;
+    }
+  }
+
+  &__barrel {
+    position: absolute;
+
+    &_22 {
+      left: 143px;
+      top: 884px;
+    }
+
+    &_3 {
+      left: 1734px;
+      top: 1114px;
+    }
+
+    @include MOBILE {
+      display: none;
+    }
+  }
+
+  &__star {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    mix-blend-mode: screen;
+
+    &_1 {
+      width: 87.82px;
+
+      left: 973px;
+      top: 119px;
+
+      transform: rotate(-77.21deg);
+    }
+
+    &_2 {
+      width: 87.82px;
+
+      left: 1259px;
+      top: 121px;
+
+      transform: rotate(-77.21deg);
+    }
+
+    &_3 {
+      width: 87.82px;
+
+      left: 17px;
+      top: 778px;
+
+      transform: rotate(-77.21deg);
+    }
+
+    &_4 {
+      width: 62.98px;
+
+      left: 55.05px;
+      top: 926px;
+
+      transform: rotate(-134.38deg);
+    }
+
+    &_5 {
+      width: 149.19px;
+
+      left: 243.17px;
+      top: 981px;
+
+      transform: rotate(139.9deg);
+    }
+
+    @include MOBILE {
+      display: none;
+    }
+  }
+
+  &__comet {
+    position: absolute;
+
+    width: 540px;
+    left: -140px;
+    top: 912px;
+
+    transform: rotate(-142.89deg);
+
+    @include MOBILE {
+      display: none;
+    }
+  }
+
+  &__content {
+    position: relative;
+  }
+
+  &__carousel {
+    margin-top: 61px;
+    width: 1591px;
+
+    padding-left: 200px;
+    padding-right: 127px;
+  }
 
   &__title {
-    margin-top: 111px;
-    margin-left: 193px;
+    padding-top: 111px;
+    padding-left: 193px;
+
+    margin: 0;
 
     font-family: $MONTSERRAT;
     font-weight: 700;
@@ -11,15 +224,35 @@
     line-height: 69.35px;
 
     color: $TITLE-COLOR;
+
+    @include MOBILE {
+      padding-top: 57px;
+      padding-left: 13px;
+
+      font-size: 32px;
+      line-height: 36px;
+    }
   }
 
   & .swiper-wrapper {
-    width: 1578px;
+    width: 1591px;
     margin: 0 auto;
+
+    @include MOBILE {
+      width: 360px;
+    }
   }
 
   & .swiper-slide {
-    margin-right: 82px;
+    margin-right: 53px;
+
+    width: 495px;
+    height: 549px;
+
+    @include MOBILE {
+      width: 260px !important;
+      height: 334px;
+    }
   }
 
   &__nav-block {
@@ -28,6 +261,10 @@
 
     width: fit-content;
     margin: 133px auto 0;
+
+    @include MOBILE {
+      margin: 31.22px auto 0;
+    }
   }
 
   &__nav {
@@ -38,14 +275,17 @@
     padding: 0;
     border: none;
 
-    //  opacity: 0.6;
     border-radius: 10px;
+
+    transition: opacity 200ms;
 
     &_prev {
       transform: rotate(180deg);
     }
 
     &_disabled {
+      pointer-events: none;
+
       opacity: 0.7;
     }
   }
@@ -62,11 +302,14 @@
     text-align: center;
 
     color: $TITLE-COLOR;
+
+    @include MOBILE {
+      margin: 0 39px;
+    }
   }
 
   &__winner {
-    width: 495px;
-    height: 549px;
+    width: inherit;
 
     font-family: $MONTSERRAT;
     font-style: normal;
@@ -75,12 +318,11 @@
   }
 
   &__winner-image {
-    width: 424px;
-    height: 424px;
+    width: 466px;
   }
 
   &__winner-name {
-    margin: 35px 0 0;
+    margin: -7px 0 0;
 
     font-weight: 600;
     font-size: 20px;
@@ -101,13 +343,25 @@
 
     position: relative;
     left: 1363px;
-    bottom: 28px;
+    top: -25px;
 
     width: fit-content;
+
+    @include MOBILE {
+      position: relative;
+      left: 0;
+      top: 0;
+
+      margin: 12px 19px 0 15px;
+
+    }
   }
 
   &__more-stories-text {
     margin: 0;
+
+    display: block;
+    width: 200px;
 
     white-space: pre-wrap;
 
@@ -118,6 +372,13 @@
     line-height: 22px;
 
     color: $TITLE-COLOR;
+
+    @include MOBILE {
+      width: 326px;
+
+      font-size: 10px;
+      line-height: 16px;
+    }
   }
 
   &__more-stories-logos {
@@ -126,8 +387,12 @@
 
     margin-top: 24.5px;
 
-    img:last-of-type {
-      margin-right: 0;
+    width: 356px;
+    justify-content: space-between;
+
+    @include MOBILE {
+      width: 329px;
+      margin-top: 9px;
     }
   }
 
@@ -135,9 +400,11 @@
     width: 65.5px;
     height: 65.5px;
 
-    margin-right: 31.5px;
+    svg {
+      width: 100%;
+      height: 100%;
+    }
   }
 
 
-
-  }
+}

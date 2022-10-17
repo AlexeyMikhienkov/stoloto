@@ -8,6 +8,7 @@ export default function Header({items}) {
     ))
   }
 
+  //TODO: переделать через li и добавить навигацию
   return (
     <header className={"header app__header"}>
       <nav className={"header__nav"}>

@@ -33,6 +33,7 @@ export const intro = {
     },
   ],
   broadcastInfo: "Смотрите трансляции тиражей\nв&nbsp;8:20 на&nbsp;НТВ",
+  broadcastInfoMobile: "Трансляции тиражей по воскресеньям\nв&nbsp;8:20 на&nbsp;НТВ",
   buyTicket: "Купить билет"
 }
 
@@ -166,12 +167,28 @@ export const winners = {
     },
   ],
   navText: "3................20",
-  moreStoriesText: "Ещё больше историй\nсмотрите в&nbsp;соцсетях",
+  moreStoriesText: "Ещё больше историй смотрите в&nbsp;соцсетях",
   logos: {
-    vk: "/images/logo/vk-logo.svg",
-    ok: "/images/logo/ok-logo.svg",
-    tiktok: "/images/logo/tiktok-logo.svg",
-    rutube: "/images/logo/rutube-logo.svg",
+    vk: {
+      src: "/images/logo/vk-logo.svg",
+      target: "_blank",
+      href: "https://vk.com"
+    },
+    ok: {
+      src: "/images/logo/ok-logo.svg",
+      target: "_blank",
+      href: "https://ok.ru"
+    },
+    tiktok: {
+      src: "/images/logo/tiktok-logo.svg",
+      target: "_blank",
+      href: "https://www.tiktok.com"
+    },
+    rutube: {
+      src: "/images/logo/rutube-logo.svg",
+      target: "_blank",
+      href: "https://rutube.ru"
+    },
   }
 }
 
@@ -181,26 +198,29 @@ export const takePart = {
     {
       title: "Выберите\nбилет",
       text: "Комбинации в билетах проставлены заранее.\nВам просто нужно выбрать один\nили несколько билетов",
-      iconSrc: "/images/take-part/ticket.png",
+      iconSrc: "/images/take-part/ticket.svg",
     },
     {
       title: "Оплатите",
-      text: "Оплатить билет вы можете любым удобным для вас способом:\n· Банковские карты — Mastercard,\nVisa, МИР;\n· Кошелёк «Столото»;\n· QIWI Кошелек;\n· Кошелёк ЮMoney; \n· Система быстрых платежей;\n· SberPay;\n· Альфа-Клик.",
-      iconSrc: "/images/take-part/pay-card.png"
+      text: "Оплатить билет вы можете любым удобным для вас способом:\n· Банковские карты — Mastercard, Visa, МИР;\n· Кошелёк «Столото»;\n· QIWI Кошелек;\n· Кошелёк ЮMoney; \n· Система быстрых платежей;\n· SberPay;\n· Альфа-Клик.",
+      iconSrc: "/images/take-part/pay-card.svg",
+      iconSrcMobile: "/images/take-part/phone-pay.svg",
     },
     {
       title: "Следите\nза розыгрышем",
       text: "Смотрите трансляцию розыгрыша или проверьте билет на\nсайте stoloto.ru.", //TODO: добавить ссылку на сайт
-      iconSrc: "/images/take-part/computer.png"
+      iconSrc: "/images/take-part/computer.svg",
+      iconSrcMobile: "/images/take-part/phone.svg",
     },
     {
       title: "Получите\nсвой выигрыш",
       text: "Выигрыши до 600 000 рублей можно получить\nонлайн. Если вы выиграли крупный приз, то\nоформить его можно\nлотерейном центре «Столото».",
-      iconSrc: "/images/take-part/winner-cup.png"
+      iconSrc: "/images/take-part/winner-cup.svg",
     },
   ],
   navText: "1................4",
-  buttonText: "Участвовать"
+  buttonText: "Участвовать",
+  buttonAlsoWant: "Хочу также!"
 }
 
 export const aboutLottery = {
@@ -208,26 +228,26 @@ export const aboutLottery = {
   advantages: [
     {
       title: "Безопасная\nрегистрация",
-      text: "При регистрации вы&nbsp;указываете только свой\nэлектронный адрес и&nbsp;номер телефона. На&nbsp;этот номер\nмы&nbsp;будем отправлять вам смс с&nbsp;паролем для\nполучения выигрышей на&nbsp;сайте.",
+      text: "При регистрации вы&nbsp;указываете только свой электронный адрес и&nbsp;номер телефона. На&nbsp;этот номер мы&nbsp;будем отправлять вам смс с&nbsp;паролем для получения выигрышей на&nbsp;сайте.",
       imageSrc: "/images/about-lottery/safe-registry.png"
     },
     {
       title: "Безопасность\nданных",
-      text: "Мы&nbsp;не&nbsp;сохраняем номера банковских карт,\nплатёжные пароли и&nbsp;другие данные, которые\nвы&nbsp;вводите при оплате билетов. Вся информация\nхранится только на&nbsp;стороне платёжной системы,\nкоторую вы&nbsp;выбираете сами.",
+      text: "Мы&nbsp;не&nbsp;сохраняем номера банковских карт,платёжные пароли и&nbsp;другие данные, которые вы&nbsp;вводите при оплате билетов. Вся информация хранится только на&nbsp;стороне платёжной системы,которую вы&nbsp;выбираете сами.",
       imageSrc: "/images/about-lottery/safe-lock.png"
     },
     {
       title: "Государственные\nлотереи",
-      text: "Организаторами всех лотерей в&nbsp;России являются\nМинистерство спорта и&nbsp;Министерство финансов.",
+      text: "Организаторами всех лотерей в&nbsp;России являются Министерство спорта и&nbsp;Министерство финансов.",
       imageSrc: "/images/about-lottery/flag.png"
     },
     {
       title: "Ваш билет никогда\nне&nbsp;потеряется",
-      text: "Вся информация о&nbsp;купленных билетах хранится\nв&nbsp;вашем личном кабинете. Если возникнут\nпроблемы, вы&nbsp;сможете обратиться в&nbsp;нашу службу\nподдержки. Мы&nbsp;всегда вам поможем.",
+      text: "Вся информация о&nbsp;купленных билетах хранится в&nbsp;вашем личном кабинете. Если возникнут проблемы, вы&nbsp;сможете обратиться в&nbsp;нашу службу поддержки. Мы&nbsp;всегда вам поможем.",
       imageSrc: "/images/about-lottery/block.png"
     },
   ],
-  watchVideo: "Смотреть\nвидео"
+  watchVideo: "Смотреть видео"
 }
 
 export const downloadApp = {
@@ -235,47 +255,79 @@ export const downloadApp = {
   advantages: [
     {
       text: "Удобная и&nbsp;безопасная оплата",
-      iconSrc: "/images/download/security.png"
+      iconSrc: "/images/download/security.svg",
+      iconSrcMobile: "/images/download/security-mobile.svg",
     },
     {
       text: "Быстрый вывод денег на&nbsp;карту",
-      iconSrc: "/images/download/card.png"
+      iconSrc: "/images/download/card.svg",
+      iconSrcMobile: "/images/download/card-mobile.svg",
     },
     {
       text: "Лотереи всегда под рукой",
-      iconSrc: "/images/download/ticket.png"
+      iconSrc: "/images/download/ticket.svg",
+      iconSrcMobile: "/images/download/ticket-mobile.svg",
     },
     {
       text: "Push-уведомления о&nbsp;выигрышах",
-      iconSrc: "/images/download/bell.png"
+      iconSrc: "/images/download/bell.svg",
+      iconSrcMobile: "/images/download/bell-mobile.svg",
     },
   ],
   download: {
     text: "Скачать",
-    icons: [
-      {
-        type: "apple",
-        iconSrc: "/images/logo/apple.png"
+    icons: {
+      apple: {
+        src: "/images/logo/apple.svg",
+        target: "_blank",
+        href: "https://apple.com"
       },
-      {
-        type: "googlePlay",
-        iconSrc: "/images/logo/google-play.png"
+      googlePlay: {
+        src: "/images/logo/google-play.svg",
+        target: "_blank",
+        href: "https://store.google.com"
       },
-      {
-        type: "xiaomi",
-        iconSrc: "/images/logo/xiaomi.png"
+      xiaomi: {
+        src: "/images/logo/xiaomi.svg",
+        target: "_blank",
+        href: "https://www.mi.com/ru"
       },
-      {
-        type: "huawei",
-        iconSrc: "/images/logo/huawei.png"
-      }
-    ]
+      huawei: {
+        src: "/images/logo/huawei.svg",
+        target: "_blank",
+        href: "https://consumer.huawei.com/ru"
+      },
+    }
+  },
+  brands: {
+    apple: {
+      src: "/images/logo/apple-white.svg",
+      target: "_blank",
+      href: "https://apple.com"
+    },
+    googlePlay: {
+      src: "/images/logo/google-play-white.svg",
+      target: "_blank",
+      href: "https://store.google.com"
+    },
+    xiaomi: {
+      src: "/images/logo/xiaomi-white.svg",
+      target: "_blank",
+      href: "https://www.mi.com/ru"
+    },
+    huawei: {
+      src: "/images/logo/huawei-white.svg",
+      target: "_blank",
+      href: "https://consumer.huawei.com/ru"
+    },
   },
   phones: [
     {src: "/images/mobile-screen_left.png", type: "left"},
     {src: "/images/mobile-screen_right.png", type: "right"},
   ],
-  increaseChance: "Повысить шансы"
+  increaseChance: "Повысить шансы",
+  buttonText: "Скачать",
+  buttonAlsoWant: "Хочу также!"
 }
 
 export const barrels = {
@@ -287,24 +339,70 @@ export const footer = {
   text: "«Джекпот 800 миллионов» указывает на минимальный гарантированный размер средств призового фонда, разыгрываемого в категории\n «Джекпот» в тиражах № 1456 (розыгрыш 04.09.2022), 1457 (розыгрыш 11.09.2022), 1458 (розыгрыш 18.09.2022). «ВГЛ 4 Спорт» (алгоритм\n определения выигрышей № 3), коммерческое наименование — «Русское лото», срок проведения — до 31.12.2029. Информацию об\n организаторе лотереи, о правилах ее проведения, о призовом фонде лотереи, количестве призов или выигрышей, о сроках, месте и порядке\n получения призов или выигрышей можно узнать на сайте www.stoloto.ru или по тел. 8 900 555-00-55.Розыгрыши проводятся еженедельно.\n Выигрыши носят вероятностный характер. Лотерея не является способом заработка и источником дохода. АО «ТК «Центр», ОГРН\n 1127746385095, адрес: 109316, Москва, Волгоградский пр-т, д. 43, корп. 3, этаж 10, пом. XXV, ком. 13Б. Реклама. 18+",
   organizerText: "Организаторами лотерей являются Министерство спорта РФ и Министерство финансов РФ.",
   logos: {
-    vk: "/images/logo/vk-logo_light.svg",
-    ok: "/images/logo/ok-logo_light.svg",
-    tiktok: "/images/logo/tiktok-logo_light.svg",
-    rutube: "/images/logo/rutube-logo_light.svg",
+    vk: {
+      src: "/images/logo/vk-logo_light.svg",
+      target: "_blank",
+      href: "https://vk.com"
+    },
+    ok: {
+      src: "/images/logo/ok-logo_light.svg",
+      target: "_blank",
+      href: "https://ok.ru"
+    },
+    tiktok: {
+      src: "/images/logo/tiktok-logo_light.svg",
+      target: "_blank",
+      href: "https://www.tiktok.com"
+    },
+    rutube: {
+      src: "/images/logo/rutube-logo_light.svg",
+      target: "_blank",
+      href: "https://rutube.ru"
+    },
   },
-  //TODO: добавить alt
+  logosMobile: {
+    vk: {
+      src: "/images/logo/vk-logo-footer.svg",
+      target: "_blank",
+      href: "https://vk.com"
+    },
+    facebook: {
+      src: "/images/logo/facebook-logo-footer.svg",
+      target: "_blank",
+      href: "https://facebook.com"
+    },
+    ok: {
+      src: "/images/logo/ok-logo-footer.svg",
+      target: "_blank",
+      href: "https://ok.ru"
+    },
+    twitter: {
+      src: "/images/logo/twitter-logo-footer.svg",
+      target: "_blank",
+      href: "https://twitter.com"
+    },
+    inst: {
+      src: "/images/logo/inst-logo-footer.svg",
+      target: "_blank",
+      href: "https://inst.com"
+    },
+    youtube: {
+      src: "/images/logo/youtube-logo-footer.svg",
+      target: "_blank",
+      href: "https://youtube.com"
+    },
+  },
   ministryIcons: {
     minSport: "/images/min-sport.png",
     minFin: "/images/min-fin.png",
   },
-  //TODO: добавить alt
   associations: {
     ela: "/images/european-lottery.png",
     wla: "/images/wla.png",
   },
   lotteryText: "АО «ТК «Центр» («Столото») состоит во Всемирной и Европейской\n лотерейных ассоциациях (The World Lottery Association и The European\n Lotteries Association), придерживаясь высоких стандартов по\n вопросам соблюдения прав участников, случайности определения\n победителей, своевременной выплаты выигрышей,\n конфиденциальности личных данных. ",
   annotations: {
-    wlaText: "WLA — международное объединение компаний-операторов\n государственных лотерей.",
-    elaText: "ELA — объединение лотерейных компанийиз Европы и соседних\n регионов."
+    wla: "WLA — международное объединение компаний-операторов\n государственных лотерей.",
+    ela: "ELA — объединение лотерейных компанийиз Европы и соседних\n регионов."
   }
 }

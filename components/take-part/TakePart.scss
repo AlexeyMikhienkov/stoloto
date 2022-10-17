@@ -1,12 +1,112 @@
 .take-part {
 
-  .swiper-wrapper {
-    margin-left: 198px;
+  position: relative;
+
+  &__star {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    mix-blend-mode: screen;
+
+    &_1 {
+      width: 87.82px;
+
+      left: 56px;
+      top: 586px;
+
+      transform: rotate(-77.21deg);
+    }
+
+    &_2 {
+      width: 87.82px;
+
+      left: 61.06px;
+      top: 838px;
+
+      transform: rotate(-77.21deg);
+    }
+
+    &_3 {
+      width: 55.15px;
+
+      left: 306.56px;
+      top: 806px;
+
+      transform: rotate(-77.21deg);
+    }
+
+    &_4 {
+      width: 87.82px;
+
+      left: 296.71px;
+      top: 927px;
+
+      transform: rotate(-77.21deg);
+    }
+
+    &_5 {
+      width: 87.82px;
+
+      left: 1462px;
+      top: 998px;
+
+      transform: rotate(-77.21deg);
+    }
+
+    &_6 {
+      width: 64.22px;
+
+      left: 1727.38px;
+      top: 886px;
+
+      transform: rotate(-77.21deg);
+    }
+
+    @include MOBILE {
+      display: none;
+    }
+  }
+
+  &__barrel {
+    position: absolute;
+
+    &_15 {
+      left: 159px;
+      top: 923px;
+    }
+
+    &_3 {
+      left: 1385.24px;
+      top: 867px;
+
+      transform: rotate(58.24deg);
+    }
+
+    @include MOBILE {
+      display: none;
+    }
+  }
+
+  &__leaf {
+    position: absolute;
+
+    width: 240px;
+
+    left: 1647.75px;
+    top: 970px;
+
+    transform: rotate(19.99deg);
+
+    @include MOBILE {
+      display: none;
+    }
   }
 
   &__title {
-    margin-top: 122px;
-    margin-left: 198px;
+    padding-top: 90px;
+    padding-left: 198px;
+
+    margin: 0;
 
     width: fit-content;
 
@@ -17,13 +117,59 @@
     line-height: 64.9px;
 
     color: $TITLE-COLOR;
+
+    @include MOBILE {
+      padding-top: 94.46px;
+      padding-left: 17px;
+
+      font-size: 32px;
+      line-height: 36px;
+    }
   }
 
-  &__action-order {
+  &__carousel {
+    margin-top: 50px;
+    width: 1681px;
+
+    padding-left: 198px;
+    padding-right: 38px;
+
+    @include MOBILE {
+      margin-top: 23px;
+      padding: 0 0 0 31px;
+    }
+  }
+
+  & .swiper-wrapper {
+    //  width: 1681px;
+    margin: 0 auto;
+  }
+
+  & .swiper-slide {
     width: 518px;
     height: 607px;
 
     box-sizing: border-box;
+
+    @include MOBILE {
+      width: 257px !important;
+      height: 389px;
+    }
+  }
+
+  & .swiper-slide-active {
+    width: 1135px !important;
+
+    @include MOBILE {
+      width: 257px !important;
+    }
+  }
+
+  &__action-order {
+    width: inherit;
+    height: inherit;
+
+    position: relative;
 
     background: rgba(255, 255, 255, 0.6);
     border: 2px solid #FFFFFF;
@@ -31,9 +177,19 @@
 
     //TODO: add gradient
     &_active {
-      width: 1135px;
       background: linear-gradient(#4C2B94, #A34881);
       border: none;
+
+      @include MOBILE {
+        & .take-part__action-order-icon {
+          display: block;
+        }
+      }
+    }
+
+    @include MOBILE {
+      //  background: linear-gradient(180deg, #4C2B94 0%, rgba(76, 43, 148, 0) 100%);
+      border-radius: 20px;
     }
   }
 
@@ -48,6 +204,10 @@
     .take-part__action-order_active & {
       width: 1062px;
       background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    @include MOBILE {
+      display: none;
     }
   }
 
@@ -67,6 +227,13 @@
 
     .take-part__action-order_active & {
       background-color: $BUTTON-COLOR;
+    }
+
+    @include MOBILE {
+      width: 37px;
+      height: 37px;
+
+      margin: 22px 0 15px 14px;
     }
   }
 
@@ -89,6 +256,11 @@
     .take-part__action-order_active & {
       color: $WHITE;
     }
+
+    @include MOBILE {
+      font-size: 17px;
+      line-height: 19.72px;
+    }
   }
 
   &__action-order-title {
@@ -110,6 +282,16 @@
     .take-part__action-order_active & {
       color: $WHITE;
     }
+
+    @include MOBILE {
+      width: 219px;
+      height: 47px;
+
+      margin: 0 0 0 14px;
+
+      font-size: 17px;
+      line-height: 20px;
+    }
   }
 
   &__action-order-text {
@@ -130,13 +312,51 @@
       width: 596px;
 
       color: $WHITE;
+
+      @include MOBILE {
+        width: 218px;
+      }
+    }
+
+    @include MOBILE {
+      width: 218px;
+      margin: 2px 25px 66px 14px;
+
+      font-size: 17px;
+      line-height: 20px;
     }
   }
 
   &__action-order-icon {
     position: relative;
     left: 830px;
-    bottom: 230px; //TODO: задать по-другому, число подобрано
+    bottom: 230px;
+
+    @include MOBILE {
+      position: absolute;
+      top: 22px;
+      display: none;
+
+      &_1 {
+        width: 84.48px;
+        left: 149px;
+      }
+
+      &_2 {
+        width: 69.08px;
+        left: 169px;
+      }
+
+      &_3 {
+        width: 47.22px;
+        left: 190px;
+      }
+
+      &_4 {
+        width: 82.16px;
+        left: 155px;
+      }
+    }
   }
 
   &__nav-block {
@@ -145,6 +365,10 @@
 
     width: fit-content;
     margin: 40px auto 0;
+
+    @include MOBILE {
+      display: none;
+    }
   }
 
   &__nav {
@@ -155,8 +379,9 @@
     padding: 0;
     border: none;
 
-    //  opacity: 0.6;
     border-radius: 10px;
+
+    transition: opacity 200ms;
 
     &_prev {
       transform: rotate(180deg);
@@ -164,6 +389,8 @@
 
     &_disabled {
       opacity: 0.7;
+
+      pointer-events: none;
     }
   }
 
@@ -183,5 +410,18 @@
 
   &__button {
     margin: 40px auto 0;
+
+    @include MOBILE {
+      display: none !important;
+    }
   }
+
+  &__button-also-want {
+    margin: 14px auto;
+
+    @include NOT-MOBILE {
+      display: none !important;
+    }
+  }
+
 }

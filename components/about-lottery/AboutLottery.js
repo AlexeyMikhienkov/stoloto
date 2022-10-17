@@ -1,31 +1,36 @@
 import {safeHTML} from "../../utils/safeHTML";
+import Carousel from "../carousel/Carousel";
+import Advantage from "./Advantage";
 
-export default function AboutLottery({title, advantages, watchVideo}) {
+export default function AboutLottery({device, title, advantages, watchVideo}) {
 
   function advantagesItems(advantages) {
-    return advantages.map(({title, text, imageSrc}, index) => (
-      <div key={index}
-           className={`about-lottery__advantages-item 
-           about-lottery__advantages-item_${index + 1} 
-           ${!index ? "about-lottery__advantages-item_active" : ""}`}
-      >
-        <p className={"about-lottery__advantages-item-title"}>{safeHTML(title)}</p>
-        <p className={"about-lottery__advantages-item-text"}>{safeHTML(text)}</p>
-        <img src={imageSrc} alt={title} className={"about-lottery__advantages-item-image"}/>
-      </div>
-    ))
+    return advantages.map((data, index) => <Advantage {...data} index={index}/>)
   }
 
   return (
     <section className={"about-lottery app__about-lottery"}>
       <h2 className={"about-lottery__title"}>{safeHTML(title)}</h2>
-      <div className={"about-lottery__video-block"}>
+      <a target={"_blank"} href={"https://www.youtube.com/"} className={"about-lottery__video-link"}>
         <p className={"about-lottery__video-text"}>{safeHTML(watchVideo)}</p>
-        <button className={"about-lottery__video-button"}/>
-      </div>
-      <div className={"about-lottery__advantages-block"}>
-        {advantagesItems(advantages)}
-      </div>
+        <img src={"/images/video-arrow.svg"} className={"about-lottery__video-link-image"}/>
+      </a>
+      {
+        device === "mobile" ?
+          <div className={"about-lottery__carousel"}>
+            <Carousel
+              settings={{
+                slidesPerView: 1,
+                spaceBetween: 14
+              }}
+              itemsData={advantages}
+              item={Advantage}
+            />
+          </div> :
+          <div className={"about-lottery__advantages-block"}>
+            {advantagesItems(advantages)}
+          </div>
+      }
     </section>
   )
 }

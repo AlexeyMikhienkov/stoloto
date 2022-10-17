@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 
 SwiperCore.use([Pagination, Navigation]);
 
-export default function Carousel({settings, prevRefNavigation, nextRefNavigation, item, itemsData, selectedSlide}) {
+export default function Carousel({settings, prevRefNavigation, nextRefNavigation, item, itemsData, selectedSlide, ...rest}) {
   const [swiper, setSwiper] = useState(null);
 
   // вшитые пропы, если не передан settings
@@ -57,17 +57,17 @@ export default function Carousel({settings, prevRefNavigation, nextRefNavigation
               }}
               initialSlide={selectedSlide}
               onSlideChange={swiper => addOnMethods(settings.onSlideChange, swiper)}>
-        {SwiperSlides(item, itemsData)}
+        {SwiperSlides(item, itemsData, rest)}
       </Swiper>
     </div>
   );
 }
 
-function SwiperSlides(Item, itemsData) {
+function SwiperSlides(Item, itemsData, rest) {
   return itemsData.map((data, index) => {
     return (
       <SwiperSlide key={data.key ?? index}>
-        <Item {...data} index={index}/>
+        <Item {...data} index={index} {...rest}/>
       </SwiperSlide>
     );
   })

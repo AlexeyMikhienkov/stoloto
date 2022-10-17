@@ -1,7 +1,16 @@
 .barrels {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
 
   &__title {
-    margin: 218px 0 0 161px;
+    position: relative;
+
+    padding-top: 218px;
+    padding-left: 161px;
+
+    margin: 0;
 
     white-space: pre-wrap;
     font-family: $MONTSERRAT;
@@ -11,5 +20,360 @@
     line-height: 70.3px;
 
     color: $WHITE;
+
+    @include MOBILE {
+      padding-top: 58px;
+      padding-left: 14px;
+
+      margin: 0;
+
+      font-size: 32px;
+      line-height: 36px;
+    }
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    position: relative;
+    height: 425px;
+
+    margin-top: 131.5px;
+    margin-left: 516px;
+
+    @include MOBILE {
+      margin-top: 153.4px;
+      margin-left: 9px;
+
+      height: 159px;
+    }
+  }
+
+  &__item {
+    position: absolute;
+
+    & img {
+      width: auto;
+      height: 100%;
+    }
+
+    &_6 {
+      width: 468px;
+      height: 424px;
+
+      @include MOBILE {
+        display: none;
+      }
+    }
+
+    &_5 {
+      width: 393.08px;
+      height: 356.1px;
+
+      left: 324px;
+
+      @include MOBILE {
+        display: none;
+      }
+    }
+
+    &_4 {
+      width: 273.31px;
+      height: 247.72px;
+
+      left: 578px;
+
+      @include MOBILE {
+        width: 177.15px;
+        height: 159.24px;
+
+        left: 0;
+      }
+    }
+
+    &_3 {
+      width: 188.5px;
+      height: 171.8px;
+
+      left: 740px;
+
+      @include MOBILE {
+        width: 122px;
+        height: 110px;
+
+        left: 105px;
+      }
+    }
+
+    &_2 {
+      width: 148.63px;
+      height: 135.25px;
+
+      left: 850px;
+
+      @include MOBILE {
+        width: 96px;
+        height: 87px;
+
+        left: 178px;
+      }
+    }
+
+    &_1 {
+      width: 112.65px;
+      height: 101.72px;
+
+      left: 948px;
+
+      @include MOBILE {
+        width: 51.71px;
+        height: 65.03px;
+        left: 240px;
+      }
+    }
+  }
+
+  &__star {
+    position: absolute;
+    mix-blend-mode: screen;
+
+    &_1 {
+      width: 87.82px;
+      left: 122px;
+      top: 476px;
+
+      transform: matrix(-0.22, -0.98, -0.98, 0.22, 0, 0);
+
+      @include MOBILE {
+        width: 64.05px;
+
+        left: -8.64px;
+        top: 184px;
+
+        opacity: 0.57;
+        transform: matrix(-0.8, -0.6, -0.6, 0.8, 0, 0);
+      }
+    }
+
+    &_2 {
+      width: 87.82px;
+
+      left: 240px;
+      top: 697px;
+
+      transform: rotate(-77.21deg);
+
+      @include MOBILE {
+        width: 51.22px;
+
+        left: 86.22px;
+        top: 129px;
+
+        opacity: 0.57;
+        // transform: matrix(-1, 0, 0, 1, 0, 0);
+        transform: rotate(76deg);
+      }
+    }
+
+    &_3 {
+      width: 87.82px;
+
+      left: 478px;
+      top: 450px;
+
+      transform: rotate(-77.21deg);
+
+      @include MOBILE {
+        width: 87.82px;
+
+        left: 229px;
+        top: 111px;
+
+        transform: rotate(-77.21deg);
+      }
+    }
+
+    &_4 {
+      width: 87.82px;
+
+      left: 1311px;
+      top: 98px;
+
+      opacity: 0.57;
+      transform: matrix(-0.22, -0.98, -0.98, 0.22, 0, 0);
+
+      @include MOBILE {
+        width: 73.89px;
+
+        left: 285.16px;
+        top: 347px;
+
+        opacity: 0.57;
+        transform: matrix(-0.22, -0.98, -0.98, 0.22, 0, 0);
+      }
+    }
+
+    &_5 {
+      width: 87.82px;
+
+      left: 1658px;
+      top: 880px;
+
+      opacity: 0.57;
+      transform: matrix(-0.22, -0.98, -0.98, 0.22, 0, 0);
+
+      @include MOBILE {
+        display: none;
+      }
+    }
+
+    &_6 {
+      width: 87.82px;
+
+      left: 1802px;
+      top: 716px;
+
+      opacity: 0.57;
+      transform: matrix(-0.22, -0.98, -0.98, 0.22, 0, 0);
+
+      @include MOBILE {
+        display: none;
+      }
+    }
+  }
+
+  &__leaf {
+    position: absolute;
+
+    &_1 {
+      width: 240px;
+
+      left: 153px;
+      top: 794px;
+
+      filter: drop-shadow(0px 16px 12px rgba(0, 0, 0, 0.25));
+
+      @include MOBILE {
+        width: 61.75px;
+
+        left: 265.92px;
+        top: 183px;
+
+        transform: rotate(77.15deg);
+      }
+    }
+
+    &_2 {
+      width: 240px;
+
+      left: 1474px;
+      top: 295px;
+
+      transform: rotate(73.15deg);
+
+      @include MOBILE {
+        width: 173.67px;
+
+        left: 139px;
+        top: 427px;
+
+        filter: drop-shadow(0px 16px 12px rgba(0, 0, 0, 0.25));
+        transform: rotate(0deg);
+      }
+    }
+
+    &_3 {
+      width: 120.89px;
+
+      left: 1500px;
+      top: 910px;
+
+      transform: rotate(53.62deg);
+
+      @include MOBILE {
+        display: none;
+      }
+    }
+
+    &_4 {
+      width: 350.96px;
+
+      left: 1474px;
+      top: 490px;
+
+      transform: rotate(-23.78deg);
+
+      @include MOBILE {
+        width: 73.17px;
+
+        left: 48.77px;
+        top: 181px;
+
+        transform: rotate(97.97deg);
+      }
+    }
+
+    &_5 {
+      width: 92.68px;
+
+      left: 260.16px;
+      top: 264px;
+
+      transform: rotate(-28.79deg);
+
+      z-index: 1;
+
+      @include NOT-MOBILE {
+        display: none;
+      }
+    }
+  }
+
+  &__bg {
+    position: absolute;
+
+    left: 18px;
+    top: 66px;
+
+    @include MOBILE {
+      left: 0;
+      top: -130px
+    }
+  }
+
+  &__bottom-bg {
+    position: absolute;
+    bottom: 0;
+
+    @include MOBILE {
+      bottom: -534px;
+    }
+  }
+
+  &__wind-bg {
+    position: absolute;
+
+    width: 597.5px;
+
+    left: 1263px;
+    top: 469px;
+
+    mix-blend-mode: lighten;
+    filter: blur(6px);
+
+    @include MOBILE {
+      display: none;
+    }
+  }
+
+  &__button {
+    position: relative;
+    margin: 78.6px auto 81px;
+
+    @include MOBILE {
+      margin: 100px auto 95px;
+    }
   }
 }

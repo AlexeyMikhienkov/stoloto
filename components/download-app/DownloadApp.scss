@@ -1,8 +1,15 @@
 .download-app {
 
-  &__title {
-    margin: 193px 0 50px 204px;
+  position: relative;
 
+  @include MOBILE {
+    z-index: 1;
+  }
+
+  &__title {
+    padding-top: 248px;
+    padding-left: 204px;
+    margin: 0;
     white-space: pre-wrap;
 
     font-family: $MONTSERRAT;
@@ -12,11 +19,125 @@
     line-height: 70.3px;
 
     color: $TITLE-COLOR;
+
+    @include MOBILE {
+      padding-top: 66px;
+      padding-left: 12px;
+
+      font-size: 32px;
+      line-height: 36px;
+
+      color: $WHITE;
+    }
+  }
+
+  &__star {
+    position: absolute;
+    mix-blend-mode: screen;
+
+    z-index: 1;
+
+    &_1 {
+      width: 87.82px;
+      left: 1415.76px;
+      top: 168px;
+
+      transform: rotate(-77.21deg);
+
+      @include MOBILE {
+        width: 87.82px;
+
+        left: 165px;
+        top: -10px;
+      }
+    }
+
+    &_2 {
+      width: 87.82px;
+
+      left: 1651.41px;
+      top: 258px;
+
+      transform: rotate(-77.21deg);
+
+      @include MOBILE {
+        width: 44.01px;
+
+        left: 262.53px;
+        top: 47px;
+
+        transform: rotate(-128.73deg);
+      }
+    }
+
+    &_3 {
+      width: 87.82px;
+
+      left: 1832.44px;
+      top: 437px;
+
+      transform: rotate(-77.21deg);
+
+      @include MOBILE {
+        display: none;
+      }
+    }
+  }
+
+  &__leaf {
+    position: absolute;
+    width: 251.78px;
+
+    left: 1504px;
+    top: 10px;
+
+    transform: rotate(-10deg);
+
+    z-index: 1;
+
+    @include MOBILE {
+      width: 92.05px;
+
+      left: 234px;
+      top: -36px;
+    }
+  }
+
+  &__barrel {
+    position: absolute;
+
+    width: 97px;
+
+    left: 1721px;
+    top: 203px;
+
+    transform: rotate(-27.93deg);
+
+    z-index: 1;
+
+    @include MOBILE {
+      display: none;
+    }
+  }
+
+  &__barrel-22 {
+    position: absolute;
+
+    width: 131.41px;
+    left: 257.25px;
+    top: 57px;
+
+    z-index: 1;
+
+    @include NOT-MOBILE {
+      display: none;
+    }
   }
 
   &__advantages {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
 
     margin-left: 204px;
     margin-top: 50px;
@@ -24,19 +145,57 @@
     div:last-of-type {
       margin-bottom: 0;
     }
+
+    @include MOBILE {
+      flex-direction: row;
+
+      width: 335px;
+
+      margin: 30px 9px 0 16px;
+      justify-content: space-between;
+    }
   }
 
   &__advantage-block {
     display: flex;
     flex-direction: row;
-    align-items: center;
-
+    align-items: flex-start;
     margin-bottom: 40px;
+
+    @include MOBILE {
+      margin-bottom: 24px;
+    }
   }
 
   &__advantage-icon {
     width: 45px; //TODO: не тот размер у изображений
     object-fit: contain;
+    position: relative;
+
+    @include MOBILE {
+      width: 24px;
+
+      & img {
+        fill: $BUTTON-COLOR;
+        stroke: $BUTTON-COLOR;
+      }
+
+      &_1 {
+        top: 3px;
+      }
+
+      &_2 {
+        top: 8px;
+      }
+
+      &_3 {
+        top: 8px;
+      }
+
+      &_4 {
+        top: 0;
+      }
+    }
   }
 
   &__advantage-text {
@@ -50,19 +209,67 @@
     letter-spacing: -2px;
 
     color: $TITLE-COLOR;
+
+    @include MOBILE {
+      width: 124px;
+      margin: 0 0 0 13px;
+
+      font-size: 17px;
+      line-height: 20px;
+
+      color: $WHITE;
+      letter-spacing: 0;
+    }
   }
 
   &__content-button {
     margin-top: 42.82px;
     margin-left: 200px;
+
+    @include MOBILE {
+      display: none !important;
+    }
+  }
+
+  &__brands-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    width: 328px;
+    margin: 60px auto 0;
+
+    @include NOT-MOBILE {
+      display: none;
+    }
+  }
+
+  &__brands-icon {
+    width: 70px;
   }
 
   &__button {
     margin: 254px auto 0;
+
+    @include MOBILE {
+      display: none !important;
+    }
   }
 
-  &__text {
-    margin-left: 38px;
+  &__button-download {
+    margin: 18px auto 0;
+
+    @include NOT-MOBILE {
+      display: none !important;
+    }
+  }
+
+  &__button-also-want {
+    margin: 10px auto 0;
+
+    @include NOT-MOBILE {
+      display: none !important;
+    }
   }
 
   &__icons {
@@ -80,12 +287,17 @@
     &_left {
       position: absolute;
       transform: translate(1117px, -476px);
-      z-index: 1;
+      z-index: 2;
     }
 
     &_right {
       position: absolute;
       transform: translate(1338px, -493px);
+      z-index: 1;
+    }
+
+    @include MOBILE {
+      display: none;
     }
   }
 

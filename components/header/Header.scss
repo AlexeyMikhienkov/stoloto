@@ -1,6 +1,13 @@
 .header {
+
+  @include MOBILE {
+    display: none;
+  }
+
   position: absolute;
   width: fit-content;
+
+  z-index: 1;
 
   &__nav {
     display: flex;
